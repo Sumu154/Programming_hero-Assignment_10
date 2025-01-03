@@ -29,12 +29,12 @@ const createCampaign = async (req, res) => {
 const updateCampaign = async (req, res) => {
   try{
     const { id} = req.params;
-    const updatedUser = await userModel.findByIdAndUpdate(
+    const updatedCampaign = await userModel.findByIdAndUpdate(
       id,
       req.body,
       {new: true},
     )
-    res.status(201).json(updatedUser);  
+    res.status(201).json(updatedCampaign);  
   }
   catch(e){
     console.error('Error while updating user:', e.message);
@@ -43,7 +43,19 @@ const updateCampaign = async (req, res) => {
 }
 
 
-const delete
+const deleteCampaign = async(req, res) => {
+  try{
+    const { id } = req.params;
+    console.log(id);
+
+    const deletedCampaign = await campaignModel.findByIdAndDelete(id);
+    res.status(201).json(deletedCampaign);  
+  }
+  catch(e){
+    console.error('Error while deleting user:', e.message);
+    res.status(500).json({ message: 'Internal Server Error', error: e.message });
+  }
+}
 
 
-module.exports = { getCampaigns, createCampaign, updateCampaign };
+module.exports = { getCampaigns, createCampaign, updateCampaign, deleteCampaign };

@@ -5,7 +5,31 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'sm': '460px',
+      },
+      fontFamily: {
+        'Lato': "Lato",
+        'Roboto': "Roboto Slab",
+      },
+      colors: {
+        'background': '#F4F8F8',
+        'blue': '#1E88E5',
+        'pink': '#FF4081',
+        // 'middlepastel': '#79A3B1',
+        // 'darkpastel': '#456268',
+        // 'dark': '#000000',
+        // 'white': '#FFFFFF',
+        // 'pink': '#DA396E',
+        'jolpai': '#B2BB1E',
+        'orange': '#F08B1D',
+        'redd': '#ed0707',
+        // 'sky': '#5D87A1',
+        'yellow': '#E3B430',
+        'green': '#309C08',
+      }
+    },
   },
   plugins: [
     require('daisyui'),

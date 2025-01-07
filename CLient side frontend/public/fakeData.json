@@ -1,0 +1,72 @@
+[
+  {
+    "userName": "John Doe",
+    "userEmail": "john.doe@example.com",
+    "title": "Revolutionary Smartwatch",
+    "type": "Startup",
+    "minAmount": 5000,
+    "deadline": "2025-03-15",
+    "photo": "https://i.ibb.co.com/2NV9hDN/Crowdfunding-for-Startups-What-It-Is-How-It-Works-01-png.webp",
+    "description": "A cutting-edge smartwatch with unique health-tracking features to make your life easier."
+  },
+  {
+    "userName": "Jane Smith",
+    "userEmail": "jane.smith@example.com",
+    "title": "Save the Rainforest",
+    "type": "Creative Ideas",
+    "minAmount": 20000,
+    "deadline": "2025-04-10",
+    "photo": "https://i.ibb.co.com/02HZN7L/BLOG-Save-the-Rainforest-4.webp",
+    "description": "An initiative to preserve the Amazon rainforest through innovative technology and awareness programs."
+  },
+  {
+    "userName": "Michael Brown",
+    "userEmail": "michael.brown@example.com",
+    "title": "Emergency Medical Expenses",
+    "type": "Personal Issue",
+    "minAmount": 3000,
+    "deadline": "2025-02-28",
+    "photo": "https://i.ibb.co.com/9HgTKYY/download.jpg",
+    "description": "Raising funds for unexpected medical bills after a major accident."
+  },
+  {
+    "userName": "Emily White",
+    "userEmail": "emily.white@example.com",
+    "title": "Short Film Project",
+    "type": "Creative Ideas",
+    "minAmount": 8000,
+    "deadline": "2025-05-20",
+    "photo": "https://i.ibb.co.com/yyHQ7WX/download.jpg",
+    "description": "A thought-provoking short film exploring social issues and inspiring change."
+  },
+  {
+    "userName": "Chris Johnson",
+    "userEmail": "chris.johnson@example.com",
+    "title": "Tech for Schools",
+    "type": "Business",
+    "minAmount": 15000,
+    "deadline": "2025-03-30",
+    "photo": "https://i.ibb.co.com/dtqGB7P/download.jpg",
+    "description": "Providing affordable technology solutions for underprivileged schools."
+  },
+  {
+    "userName": "Sarah Lee",
+    "userEmail": "sarah.lee@example.com",
+    "title": "Eco-Friendly Packaging",
+    "type": "Startup",
+    "minAmount": 10000,
+    "deadline": "2025-04-05",
+    "photo": "https://i.ibb.co.com/nRzPnxN/download.jpg",
+    "description": "Creating biodegradable and recyclable packaging to reduce plastic waste."
+  },
+  {
+    "userName": "David Wilson",
+    "userEmail": "david.wilson@example.com",
+    "title": "Music Album Launch",
+    "type": "Creative Ideas",
+    "minAmount": 7000,
+    "deadline": "2025-03-25",
+    "photo": "https://i.ibb.co.com/PF3NpGM/download.jpg",
+    "description": "Recording and releasing an independent music album featuring diverse genres."
+  }
+]

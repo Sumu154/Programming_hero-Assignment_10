@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const userRoutes = require('./routes/userRoutes')
 const campaignRoutes = require('./routes/campaignRoutes')
+const donatedUserRoutes = require('./routes/donatedUserRoutes')
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -26,7 +27,8 @@ app.get('/', (req, res) => {
 
 
 app.use('/api', userRoutes);
-app.use('/api', campaignRoutes)
+app.use('/api', campaignRoutes);
+app.use('/api', donatedUserRoutes);
 
 
 app.listen(port, () => {

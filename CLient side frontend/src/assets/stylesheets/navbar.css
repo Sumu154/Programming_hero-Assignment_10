@@ -1,0 +1,14 @@
+.menu li > *:not(ul, .menu-title, details, .btn):active, 
+.menu li > *:not(ul, .menu-title, details, .btn).active, 
+.menu li > details > summary:active {
+  background-color: #FCF8EC;
+  color: black;
+  opacity: .9;
+}
+
+.menu li > *:not(ul, .menu-title, details, .btn){
+  opacity: .6;
+}
+
+
+

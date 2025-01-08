@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-background font-Lato'>
+      <div className='bg-background dark:bg-darkbackground font-Lato'>
         <Navbar></Navbar>
         <Outlet></Outlet>
         <Footer></Footer>

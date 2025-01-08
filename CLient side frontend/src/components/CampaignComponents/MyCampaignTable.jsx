@@ -24,6 +24,7 @@ const MyCampaignTable = () => {
   }, [user.email]);
 
 
+
   const handleDeleteCampaign = async (id) => {
     //console.log(id);
 
@@ -48,18 +49,29 @@ const MyCampaignTable = () => {
       const res = await fetch(`https://server-side-backend.vercel.app/api/deleteCampaign/${id}`, {
         method: 'DELETE',
       });
+
+      if(res.ok){
+        setCampaigns(campaigns.filter(it => it._id !== id));
+      } 
+      else{
+        Swal.fire({
+          title: "Error",
+          text: "Failed to delete the campaign.",
+          icon: "error",
+        });
+      }
     }
   }
 
   
 
   return (
-    <div className='w-[90%] mx-auto bg-white mt-14 '>
+    <div className='w-[90%] mx-auto bg-white mt-14   dark:bg-cardbackground'>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
           <thead>
-            <tr className='text-black text-opacity-85 text-sm lg:text-base'>
+            <tr className='text-black text-opacity-85 text-sm lg:text-base    dark:text-white '>
               <th> title </th>
               <th> type </th>
               <th> minAmount </th>
@@ -72,7 +84,7 @@ const MyCampaignTable = () => {
               const { _id:id, userName, title, type, minAmount, deadline } = it;
 
               return (
-                <tr className='text-sm text-black text-opacity-70'>
+                <tr className='text-sm text-black text-opacity-70    dark:text-white  dark:text-opacity-85'>
                   <td> {title} </td>
                   <td> {type} </td>
                   <td> {minAmount} </td>

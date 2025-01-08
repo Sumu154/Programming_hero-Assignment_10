@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 
@@ -41,6 +42,15 @@ const AddCampaignForm = () => {
     const data = await res.json();
     //console.log(data);
 
+    Swal.fire({
+      title: "Campaign added successfully!",
+      icon: "success",
+      customClass: {
+        popup: 'small-modal'
+      }
+    });
+
+
     e.target.reset();
 
   }
@@ -49,28 +59,28 @@ const AddCampaignForm = () => {
 
 
   return (
-    <div className='max-w-[600px] mx-auto bg-white mt-14'>
-      <h3 className='pt-6 text-center font-semibold opacity-80 text-2xl md:text-3xl'> Add New Campaign </h3>
+    <div className='max-w-[600px] mx-auto bg-white mt-14   dark:bg-cardbackground'>
+      <h3 className='pt-6 text-center font-semibold opacity-80 text-2xl md:text-3xl   dark:text-white   '> Add New Campaign </h3>
       <form onSubmit={handleAddCampaign} className="card-body">
         {/* first row */}
-        <div className='flex justify-between'>
+        <div className='flex justify-between    '>
           <div className="form-control w-[49%] ">
-            <label className="label"> <span className="label-text"> Your Name </span> </label>
+            <label className="label   "> <span className="label-text   dark:text-white"> Your Name </span> </label>
             <input name='userName' type="text" placeholder="name" className="input input-bordered" required />
           </div>
           <div className="form-control w-[49%] ">
-            <label className="label"> <span className="label-text"> Your Email </span> </label>
+            <label className="label"> <span className="label-text   dark:text-white"> Your Email </span> </label>
             <input name='userEmail' type="email" placeholder="email" className="input input-bordered" required />
           </div>
         </div>
         {/* second row */}
         <div className='flex justify-between'>
           <div className="form-control w-[49%] ">
-            <label className="label"> <span className="label-text"> Campaign title </span> </label>
+            <label className="label"> <span className="label-text   dark:text-white"> Campaign title </span> </label>
             <input name='title' type="text" placeholder="title" className="input input-bordered" required />
           </div>
           <div className="form-control w-[49%]">
-            <label className="label"> <span className="label-text">Campaign Type</span>  </label>
+            <label className="label"> <span className="label-text  dark:text-white">Campaign Type</span>  </label>
             <input name="type"  list="campaign-types" className="input input-bordered" placeholder="Select or type a type" required />
             <datalist id="campaign-types">
               <option value="Personal Issue"></option>
@@ -84,21 +94,21 @@ const AddCampaignForm = () => {
         {/* third row */}
         <div className='flex justify-between'>
           <div className="form-control w-[49%] ">
-            <label className="label"> <span className="label-text"> Minimum Donation Amount </span> </label>
+            <label className="label"> <span className="label-text   dark:text-white"> Minimum Donation Amount </span> </label>
             <input name='minAmount' type="text" placeholder="minimum amount" className="input input-bordered" required />
           </div>
           <div className="form-control w-[49%] ">
-            <label className="label"> <span className="label-text"> Deadline </span> </label>
+            <label className="label"> <span className="label-text   dark:text-white"> Deadline </span> </label>
             <input name='deadline' type="date" placeholder="date" className="input input-bordered" required />
           </div>
         </div>
         {/* rest */}
         <div className="form-control">
-          <label className="label"> <span className="label-text"> Campaign Image URL </span> </label>
+          <label className="label"> <span className="label-text   dark:text-white"> Campaign Image URL </span> </label>
           <input name='photo' type="url" placeholder="image url" className="input input-bordered" required />
         </div>
         <div className="form-control">
-          <label className="label"> <span className="label-text"> Description </span> </label>
+          <label className="label"> <span className="label-text   dark:text-white"> Description </span> </label>
           <textarea name="description" id="" cols="30" rows="3" className='border-[1px] border-black border-opacity-15 rounded-lg'></textarea>
         </div>
 

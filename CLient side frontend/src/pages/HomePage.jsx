@@ -4,6 +4,7 @@ import CategorySection from '../components/HomeCompoents/CategorySection';
 import OrganizationSection from '../components/HomeCompoents/OrganizationSection';
 import HomeCampaigns from '../components/HomeCompoents/HomeCampaigns';
 
+
 const HomePage = () => {
   return (
     <div>

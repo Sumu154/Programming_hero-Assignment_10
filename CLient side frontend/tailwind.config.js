@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class', // Enable dark mode by class
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -15,6 +16,9 @@ export default {
       },
       colors: {
         'background': '#F4F8F8',
+        'darkbackground': '#1C1C1C',
+        'cardbackground': '#2A2A2A',
+        'footerbackground': '#121212',
         'blue': '#1E88E5',
         'pink': '#FF4081',
         // 'middlepastel': '#79A3B1',

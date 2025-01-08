@@ -7,6 +7,7 @@ import { MdEmail } from "react-icons/md";
 import { AuthContext } from '../../contexts/AuthProvider';
 import Swal from 'sweetalert2';
 
+
 import '../../assets/stylesheets/campaign.css'
 
 const CampaignDetails = () => {
@@ -40,6 +41,19 @@ const CampaignDetails = () => {
 
   
   const handleDonate = async () => {
+    const today = new Date();
+    const deadlineDate = new Date(deadline);
+    if(today > deadlineDate){
+      Swal.fire({
+        title: "Deadline is over!",
+        icon: "error",
+        customClass: {
+          popup: 'small-modal'
+        }
+      });
+      return;
+    }
+
     // console.log(user.displayName, user.email);
     const donatedUser = {
       name: user.displayName, 
@@ -56,28 +70,20 @@ const CampaignDetails = () => {
       body: JSON.stringify(donatedUser),
     });
     const data = await res.json();
-
-    Swal.fire({
-      title: "Congratulation!",
-      text: "Funding added successfully!",
-      icon: "success",
-      customClass: {
-        popup: 'small-modal'
-      }
-    });
+    
   };
 
 
 
   return (
-    <div className='bg-white my-14 py-12'>
+    <div className='bg-white my-14 py-12    dark:bg-cardbackground '>
       <div className='w-[90%] md:w-[80%] lg:w-[70%] mx-auto mb-10 flex flex-col sm:flex-row justify-between items-center gap-8'>
         <div> 
           <img className='rounded-lg w-[80%] sm:w-full mx-auto h-[150px] sm:h-[180px] lg:h-[200px] ' src={photo} alt="" />
         </div>
-        <div className='text-black text-opacity-60'>
+        <div className='text-black text-opacity-60    dark:text-white  dark:text-opacity-80'>
           <div className='flex justify-between items-center'>
-            <h3 className='text-xl lg:text-2xl font-bold text-black text-opacity-80 mb-1'> {title} </h3>
+            <h3 className='text-xl lg:text-2xl font-bold text-black text-opacity-80 mb-1   dark:text-white'> {title} </h3>
             <span className={`text-sm font-semibold border-[1px] bg-opacity-20 rounded-3xl px-3 py-1 mr-4 ${statusClass}`}> {status} </span>
           </div>
           <p className='text-lg lg:text-xl mb-1 '> {type} </p>
@@ -87,7 +93,7 @@ const CampaignDetails = () => {
         </div>
       </div>
 
-      <div className='w-[85%] md:w-[75%] lg:w-[65%] mx-auto text-black text-opacity-75'>
+      <div className='w-[85%] md:w-[75%] lg:w-[65%] mx-auto text-black text-opacity-75  dark:text-white dark:text-opacity-75'>
         <p> Added By: </p>
         <p className='flex items-center gap-1'> <span className='text-lg'> <FaRegUserCircle /> </span> Username:  <span className='ml-1'> {userName} </span> </p>
         <p className='flex items-center gap-1'> <span className='text-xl'> <MdEmail /> </span> Email:  <span className='ml-1'> {userEmail} </span> </p>

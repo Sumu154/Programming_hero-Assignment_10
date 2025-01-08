@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { MdOutlineExplore } from "react-icons/md";
+import { BiSolidDonateHeart } from "react-icons/bi";
 
 
 import '../../assets/stylesheets/home.css'
-// import slider1 from '../../assets/images/slider1.webp'
-// import slider2 from '../../assets/images/slider2.jpg'
-// import slider3 from '../../assets/images/slider4.jpg'
+import slider1 from '../../assets/images/slider1.jpg'
+import slider2 from '../../assets/images/slider2.jpg'
+import slider3 from '../../assets/images/slider3.jpg'
 
 
 import AOS from 'aos';
@@ -34,58 +35,45 @@ const HomeBanner = () => {
         </div>
         {/* left right bar */}
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide4" className="btn btn-circle">❮</a>
+          <a href="#slide3" className="btn btn-circle">❮</a>
           <a href="#slide2" className="btn btn-circle">❯</a>
         </div>
       </div>
 
       {/* slide 2 */}
-      {/* <div id="slide2" className="carousel-item relative w-full">
-        <div className='flex justify-between items-center bg-lightpastel w-[90%] mx-auto py-6 lg:py-0'>
-          <div className='w-[65%] text-center pl-4'>
-            <h3 className='text-darkpastel font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-[600px] mx-auto mb-4 px-2'> Warm Cumilla This Winter spread happiness </h3>
-            <p className='text-dark opacity-60 text-sm hidden md:inline-block max-w-[550px] mx-auto mb-4 px-4'> Join us in bringing comfort to families in Cumilla this winter. Your support can help provide warm clothes supplies. </p>
-            <p data-aos='flip-left' className='text-pink font-semibold text-base sm:text-xl flex gap-1 justify-center'> Donate Now <span className='text-xl sm:text-2xl'> <BiSolidDonateHeart/>  </span> </p>
+      <div id="slide2" className="carousel-item relative w-full bg-slate-200  dark:bg-cardbackground">
+        <div className='flex justify-between items-center w-[90%] mx-auto py-6 lg:py-0'>
+          <div className='w-full sm:w-[55%] text-center dark:text-white'>
+            <h3 className='font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-[600px] mx-auto mb-4 px-2'> Help Empower Local Entrepreneurs in Bangladesh </h3>
+            <p className='text-dark opacity-60 text-sm  max-w-[550px] mx-auto mb-4 px-4'> Support small businesses and innovative projects by contributing to their growth. Your donations fuel their dreams. </p>
           </div>
-          <img className='w-[45%] md:w-[40%] h-[220px] md:h-[260px] lg:h-[300px] mr-6 rounded-md' src={slider1} alt="" />
+          <div className='w-full sm:w-[45%]'>
+            <img className=' ' src={slider1} alt="" />
+          </div>
         </div>
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
           <a href="#slide1" className="btn btn-circle">❮</a>
           <a href="#slide3" className="btn btn-circle">❯</a>
         </div>
-      </div> */}
+      </div>
 
-      {/* slide 3 */}
-      {/* <div id="slide3" className="carousel-item relative w-full">
-        <div className='flex justify-between items-center bg-lightpastel w-[90%] mx-auto py-6 lg:py-0'>
-          <div className='w-[65%] text-center pl-4'>
-            <h3 className='text-darkpastel font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-[600px] mx-auto mb-4 px-2'> Bring Warmth to Chittagong together </h3>
-            <p className='text-dark opacity-60 text-sm hidden md:inline-block max-w-[550px] mx-auto mb-4 px-4'> Keep the warmth alive this winter by making a difference! Your donation can help bring comfort to those in need </p>
-            <p data-aos='flip-left' className='text-pink font-semibold text-base sm:text-xl flex gap-1 justify-center'> Donate Now <span className='text-xl sm:text-2xl'> <BiSolidDonateHeart/>  </span> </p>
+
+      <div id="slide3" className="carousel-item relative w-full bg-slate-200  dark:bg-cardbackground">
+        <div className='flex justify-between items-center w-[90%] mx-auto py-6 lg:py-0'>
+          <div className='w-full sm:w-[55%] text-center dark:text-white'>
+            <h3 className='font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-[600px] mx-auto mb-4 px-2'> Support Education for Underprivileged Children </h3>
+            <p className='text-dark opacity-60 text-sm  max-w-[550px] mx-auto mb-4 px-4'>         Your donation can help provide quality education for children in remote areas. Let's work together to shape their future. </p>
           </div>
-          <img className='w-[45%] md:w-[40%] h-[220px] md:h-[260px] lg:h-[300px] mr-6 rounded-md' src={slider2} alt="" />
+          <div className='w-full sm:w-[45%]'>
+            <img className=' ' src={slider2} alt="" />
+          </div>
         </div>
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
           <a href="#slide2" className="btn btn-circle">❮</a>
-          <a href="#slide4" className="btn btn-circle">❯</a>
-        </div>
-      </div> */}
-
-      {/* slide 4 */}
-      {/* <div id="slide4" className="carousel-item relative w-full">
-        <div className='flex justify-between items-center bg-lightpastel w-[90%] mx-auto py-6 lg:py-0'>
-          <div className='w-[65%] text-center pl-4'>
-            <h3 className='text-darkpastel font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-[600px] mx-auto mb-4 px-2'>  Support Dhaka’s Winter Drive those who need </h3>
-            <p className='text-dark opacity-60 text-sm hidden md:inline-block max-w-[550px] mx-auto mb-4 px-4'> Keep the warmth alive this winter by making a difference! Your donation can help bring comfort to those in need </p>
-            <p data-aos='flip-left' className='text-pink font-semibold text-base sm:text-xl flex gap-1 justify-center'> Donate Now <span className='text-xl sm:text-2xl'> <BiSolidDonateHeart/>  </span> </p>
-          </div>
-          <img className='w-[45%] md:w-[40%] h-[220px] md:h-[260px] lg:h-[300px] mr-6 rounded-md' src={slider3} alt="" />
-        </div>
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide3" className="btn btn-circle">❮</a>
           <a href="#slide1" className="btn btn-circle">❯</a>
         </div>
-      </div> */}
+      </div>
+
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CampaignCard = ( {campaign} ) => {
 
-  const {  _id:id, userName, photo, title, type, minAmount, deadline, description } = campaign;
+  const {  _id:id, photo, title, type, minAmount, deadline, description } = campaign;
 
 
   return (

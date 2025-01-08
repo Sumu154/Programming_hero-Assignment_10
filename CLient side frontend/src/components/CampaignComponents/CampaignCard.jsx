@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DonationCard = ( {campaign} ) => {
-  const {  _id:id, userName, photo, title, type, minAmount, deadline, description } = campaign;
+const CampaignCard = ( {campaign} ) => {
 
+  const {  _id:id, userName, photo, title, type, minAmount, deadline, description } = campaign;
 
 
   return (
     <div className='border-black border-[1px] border-opacity-15 rounded-md p-3'>
       <div className='mb-4'> 
-        <img className='rounded-lg' src={photo} alt="" />
+        <img className='rounded-lg h-[160px] w-full ' src={photo} alt="" />
       </div>
       <div className=''>
         <h3 className='opacity-95 font-bold text-xl  '> {title} </h3>
@@ -21,4 +21,4 @@ const DonationCard = ( {campaign} ) => {
   );
 };
 
-export default DonationCard;
+export default CampaignCard;

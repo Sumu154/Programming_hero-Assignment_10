@@ -25,7 +25,7 @@ export default {
         'jolpai': '#B2BB1E',
         'orange': '#F08B1D',
         'redd': '#ed0707',
-        // 'sky': '#5D87A1',
+        'sky': '#5D87A1',
         'yellow': '#E3B430',
         'green': '#309C08',
       }

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider';
-import DonationCard from './DonationCard';
+import CampaignCard from '../CampaignComponents/CampaignCard';
 
 const MyDonations = () => {
   const { user } = useContext(AuthContext);
@@ -49,7 +49,7 @@ const MyDonations = () => {
     <div className='w-[90%] mx-auto my-12 '>
       <h3 className='opacity-80 font-medium text-3xl lg:text-4xl mb-4'> See your donations here </h3>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'> {campaigns.map((it) => {
-        return <DonationCard campaign={it} ></DonationCard>
+        return <CampaignCard campaign={it} ></CampaignCard>
       })}
       </div>
     </div>

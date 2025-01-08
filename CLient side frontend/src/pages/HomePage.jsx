@@ -1,12 +1,16 @@
 import React from 'react';
 import HomeBanner from '../components/Header/HomeBanner';
-import HomeSection from '../components/HomeCompoents/HomeSection';
+import CategorySection from '../components/HomeCompoents/CategorySection';
+import OrganizationSection from '../components/HomeCompoents/OrganizationSection';
+import HomeCampaigns from '../components/HomeCompoents/HomeCampaigns';
 
 const HomePage = () => {
   return (
     <div>
         <HomeBanner></HomeBanner>
-        <HomeSection></HomeSection>
+        <OrganizationSection></OrganizationSection>
+        <CategorySection></CategorySection>
+        <HomeCampaigns></HomeCampaigns>
     </div>
   );
 };

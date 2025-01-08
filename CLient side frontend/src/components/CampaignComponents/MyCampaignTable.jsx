@@ -13,7 +13,7 @@ const MyCampaignTable = () => {
 
   useEffect(() => {
     const fetchMyCampaigns = async () => {
-      const res = await fetch(`http://localhost:3000/api/myCampaigns?email=${email}`);
+      const res = await fetch(`https://server-side-backend.vercel.app/api/myCampaigns?email=${email}`);
       const data = await res.json();
 
       setCampaigns(data);
@@ -25,7 +25,7 @@ const MyCampaignTable = () => {
 
 
   const handleDeleteCampaign = async (id) => {
-    console.log(id);
+    //console.log(id);
 
     const alert = await Swal.fire({
       title: "Are you sure?",
@@ -45,7 +45,7 @@ const MyCampaignTable = () => {
       });
       // Add your delete logic here, if any
 
-      const res = await fetch(`http://localhost:3000/api/deleteCampaign/${id}`, {
+      const res = await fetch(`https://server-side-backend.vercel.app/api/deleteCampaign/${id}`, {
         method: 'DELETE',
       });
     }

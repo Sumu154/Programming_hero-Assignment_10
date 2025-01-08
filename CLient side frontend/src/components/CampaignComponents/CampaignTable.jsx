@@ -8,7 +8,7 @@ const CampaignTable = () => {
 
   useEffect(()=>{
     const fetchCampaigns = async () => {
-      const res = await fetch('http://localhost:3000/api/campaigns/');
+      const res = await fetch('https://server-side-backend.vercel.app/api/campaigns/');
       const data = await res.json();
 
       setCampaigns(data);

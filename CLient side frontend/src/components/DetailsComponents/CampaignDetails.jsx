@@ -46,9 +46,9 @@ const CampaignDetails = () => {
       email: user.email,
       campaign_id: id,
     }
-    console.log(donatedUser);
+    //console.log(donatedUser);
 
-    const res = await fetch(`http://localhost:3000/api/donatedUsers`, {
+    const res = await fetch(`https://server-side-backend.vercel.app/api/donatedUsers`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

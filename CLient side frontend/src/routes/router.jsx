@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         path: "/campaign/:id",
         element: <PrivateRoute> <CampaignDetails></CampaignDetails> </PrivateRoute>,
         loader: async ( {params} ) => {
-          const res = await fetch(`http://localhost:3000/api/campaign/${params.id}`);
+          const res = await fetch(`https://server-side-backend.vercel.app/api/campaign/${params.id}`);
           const campaign = await res.json();
           return campaign;
         }
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         path: "/updateCampaign/:id",
         element: <PrivateRoute>  <UpdateCampaignPage></UpdateCampaignPage>  </PrivateRoute>,
         loader: async ( {params} ) => {
-          const res = await fetch(`http://localhost:3000/api/campaign/${params.id}`);
+          const res = await fetch(`https://server-side-backend.vercel.app/api/campaign/${params.id}`);
           const campaign = await res.json();
           return campaign;
         }

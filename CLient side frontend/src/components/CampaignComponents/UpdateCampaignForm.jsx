@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 
 const UpdateCampaignForm = ( {campaign} ) => {
-  console.log(campaign);
+  //console.log(campaign);
   const { _id:id } = campaign;
 
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const UpdateCampaignForm = ( {campaign} ) => {
     const updatedCampaign = { title, type, minAmount, deadline, photo, description };
     
     // database e store korte hbe
-    const res = await fetch(`http://localhost:3000/api/updateCampaign/${id}`, {
+    const res = await fetch(`https://server-side-backend.vercel.app/api/updateCampaign/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const UpdateCampaignForm = ( {campaign} ) => {
 
     })
     const data = await res.json();
-    console.log(data);
+   // console.log(data);
 
     e.target.reset();
 

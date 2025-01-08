@@ -65,7 +65,7 @@ const RegisterForm = () => {
     }
 
     // database e add korbo ekhn
-    const res = await fetch('http://localhost:3000/api/users', {
+    const res = await fetch('https://server-side-backend.vercel.app/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const RegisterForm = () => {
       body: JSON.stringify(user),
     })
     const data = await res.json();
-    console.log(data);
+    //console.log(data);
   }
 
 

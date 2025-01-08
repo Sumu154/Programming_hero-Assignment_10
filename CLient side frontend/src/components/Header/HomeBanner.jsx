@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { MdOutlineExplore } from "react-icons/md";
 
+
 import '../../assets/stylesheets/home.css'
 // import slider1 from '../../assets/images/slider1.webp'
 // import slider2 from '../../assets/images/slider2.jpg'

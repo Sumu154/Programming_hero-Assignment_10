@@ -30,7 +30,7 @@ const AddCampaignForm = () => {
 
     
     // database e store korte hbe
-    const res = await fetch('http://localhost:3000/api/campaigns/', {
+    const res = await fetch('https://server-side-backend.vercel.app/api/campaigns/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const AddCampaignForm = () => {
 
     })
     const data = await res.json();
-    console.log(data);
+    //console.log(data);
 
     e.target.reset();
 

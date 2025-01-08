@@ -7,7 +7,7 @@ const HomeCampaigns = () => {
 
   useEffect(()=>{
       const fetchCampaigns = async () => {
-        const res = await fetch('http://localhost:3000/api/campaigns/');
+        const res = await fetch('https://server-side-backend.vercel.app/api/campaigns/');
         const data = await res.json();
   
         setCampaigns(data.slice(0, 6));
@@ -20,7 +20,7 @@ const HomeCampaigns = () => {
 
 
   return (
-    <div className='w-[90%] mx-auto my-20 '>
+    <div id='campaigns' className='w-[90%] mx-auto my-20 '>
       <h3 className='text-black text-opacity-70 font-semibold text-2xl sm:text-3xl lg:text-3xl text-center m-6'> Our Featured Campaigns </h3>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'> {campaigns.map((it) => {
         return <CampaignCard campaign={it} ></CampaignCard>

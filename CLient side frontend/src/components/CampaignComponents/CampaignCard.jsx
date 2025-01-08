@@ -7,7 +7,7 @@ const CampaignCard = ( {campaign} ) => {
 
 
   return (
-    <div className='border-black border-[1px] border-opacity-15 rounded-md p-3'>
+    <div className='border-black border-[1px] border-opacity-15 rounded-md p-3 hover:border-blue hover:border-opacity-50 hover:p-2 '>
       <div className='mb-4'> 
         <img className='rounded-lg h-[160px] w-full ' src={photo} alt="" />
       </div>

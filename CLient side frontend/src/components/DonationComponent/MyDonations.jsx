@@ -11,10 +11,10 @@ const MyDonations = () => {
   
   useEffect(() => {
     const fetchCampaignIds = async () => {
-      const res = await fetch(`http://localhost:3000/api/donatedUserDonations?email=${email}`);
+      const res = await fetch(`https://server-side-backend.vercel.app/api/donatedUserDonations?email=${email}`);
       const data = await res.json();
 
-      console.log(data);
+      //console.log(data);
       // extracts campaign IDs
       const ids = data.map((it) => {
         return it.campaign_id;
@@ -32,7 +32,7 @@ const MyDonations = () => {
     const fetchCampaigns = async () => {
       const campaignData = await Promise.all(
         campaignIds.map(async (id) => {
-          const res = await fetch(`http://localhost:3000/api/campaign/${id}`);
+          const res = await fetch(`https://server-side-backend.vercel.app/api/campaign/${id}`);
           return res.json();
         })
       );
@@ -43,7 +43,7 @@ const MyDonations = () => {
     fetchCampaigns();
   }, [campaignIds]);
 
-  console.log(campaigns);
+  //console.log(campaigns);
 
   return (
     <div className='w-[90%] mx-auto my-12 '>

@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCkMHrhMrq8KLYh4Hjx3X75fExfaq7m9jE",
-  authDomain: "crowd-funding-b838b.firebaseapp.com",
-  projectId: "crowd-funding-b838b",
-  storageBucket: "crowd-funding-b838b.firebasestorage.app",
-  messagingSenderId: "245851591587",
-  appId: "1:245851591587:web:42a3d08b29e5f21d3d4016"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

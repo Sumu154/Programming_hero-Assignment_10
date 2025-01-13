@@ -70,6 +70,13 @@ const CampaignDetails = () => {
       body: JSON.stringify(donatedUser),
     });
     const data = await res.json();
+    Swal.fire({
+      title: "Successfully donated!",
+      icon: "success",
+      customClass: {
+        popup: 'small-modal'
+      }
+    });
     
   };
 

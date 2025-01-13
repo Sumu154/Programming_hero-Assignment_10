@@ -48,8 +48,6 @@ const UpdateCampaignForm = ( {campaign} ) => {
     });
 
     e.target.reset();
-
-    // show a toast
   }
 
 

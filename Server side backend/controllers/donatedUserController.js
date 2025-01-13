@@ -44,4 +44,19 @@ const createDonatedUser = async (req, res) => {
 }
 
 
-module.exports = { getDonatedUsers, createDonatedUser, getDonatedUserDonations };
+const deleteDonatedUser = async (req, res) => {
+  try{
+    const { id } = req.params;
+    console.log(id);
+
+    const deletedDonatedUser  = await donatedUserModel.deleteMany({ campaign_id: id });
+    res.status(201).json(deletedDonatedUser);  
+  }
+  catch(e){
+    console.error('Error while deleting campaign:', e.message);
+    res.status(500).json({ message: 'Internal Server Error', error: e.message });
+  }
+}
+
+
+module.exports = { getDonatedUsers, createDonatedUser, getDonatedUserDonations, deleteDonatedUser };

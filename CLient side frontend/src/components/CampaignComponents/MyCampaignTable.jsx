@@ -45,12 +45,15 @@ const MyCampaignTable = () => {
         icon: "success"
       });
       // Add your delete logic here, if any
-
-      const res = await fetch(`https://server-side-backend.vercel.app/api/deleteCampaign/${id}`, {
+      // caMpaigns database theke delete
+      const res1 = await fetch(`https://server-side-backend.vercel.app/api/deleteCampaign/${id}`, {
         method: 'DELETE',
       });
-
-      if(res.ok){
+      // donatedUser databse theke delete
+      const res2 = await fetch(`https://server-side-backend.vercel.app/api/donatedUsers/${id}`, {
+        method: 'DELETE',
+      })
+      if(res1.ok && res2.ok){
         setCampaigns(campaigns.filter(it => it._id !== id));
       } 
       else{

@@ -60,8 +60,8 @@ const CampaignDetails = () => {
       email: user.email,
       campaign_id: id,
     }
-    //console.log(donatedUser);
 
+    //console.log(donatedUser);
     const res = await fetch(`https://server-side-backend.vercel.app/api/donatedUsers`, {
       method: 'POST',
       headers: {
@@ -70,6 +70,8 @@ const CampaignDetails = () => {
       body: JSON.stringify(donatedUser),
     });
     const data = await res.json();
+
+    
     Swal.fire({
       title: "Successfully donated!",
       icon: "success",
